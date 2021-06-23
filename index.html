@@ -5,12 +5,13 @@
     <div class="wall h" style="width: 437px; bottom: -24px; right: 0;">4370</div>
     <div class="wall v" style="height: 333px; bottom: 0; right: -24px;">
       3330
-      <div class="window" style="height: 173px; bottom: 56px; right: 0;">窗1730</div>
+      <div class="window" style="height: 173px; bottom: 56px; right: -10px;">1730</div>
     </div>
     <div class="wall h" style="width: 437px; bottom: 333px; right: 0;">4370</div>
     <div class="wall v xs" style="height: 188px; bottom: 0; left: -10px;">1880</div>
     <div class="wall v xs" style="height: 57px; top: 0; left: -10px;">570</div>
     <div class="col" style="width: 35px; height: 20px; top: 0; right: 0;"></div>
+    <div class="door" style="width: 10px; height: 88px; left: -10px; top: 57px; writing-mode: tb;">880</div>
   </div>
 <!--  卫生间  -->
   <div class="room" style="width: 250px; height: 159px; bottom: 24px; right: 471px">
@@ -19,6 +20,7 @@
     <div class="wall v xs" style="height: 159px; bottom: 0; left: -10px;">1590</div>
     <div class="wall h xs" style="width: 101px; top: -10px; left: 0;">1010</div>
     <div class="wall h xs" style="width: 71px; top: -10px; right: 0;">710</div>
+    <div class="col" style="width: 40px; height: 32px; right: 0; bottom: 0;"></div>
   </div>
   <!--   过道   -->
   <div class="room" style="width: 260px; height: 164px; bottom: 193px; right: 471px">过道
@@ -29,44 +31,45 @@
   <div class="room" style="width: 442px; height: 333px; bottom: 24px; right: 731px">客厅
     <div class="wall h" style="width: 442px; bottom: -24px; left: 0">4420</div>
     <div class="wall h" style="width: 315px; top: -24px; right: 0">3150</div>
-    <div class="wall v" style="height: 174px; bottom: 0; left: -24px">约1740
-      <div class="window" style="height: 123px; bottom: 0; left: 0;">窗1230</div>
+    <div class="wall v" style="height: 174px; bottom: 0; left: -24px">1740
+      <div class="window" style="height: 123px; bottom: 0; left: -10px;">1230</div>
     </div>
     
   </div>
   <!--  厨房  -->
   <div class="room" style="width: 274px; height: 159px; bottom: 198px; right: 1197px">厨房
     <div class="wall h" style="width: 274px; bottom: -24px; right: 0">2740</div>
-    <div class="wall v" style="height: 159px; bottom: 0px; right: -24px">1590</div>
+    <div class="wall remove v" style="height: 159px; bottom: 0px; right: -24px">1590</div>
     <div class="wall v" style="height: 159px; bottom: 0px; left: -24px">1590
-      <div class="window" style="height: 57px; top: 40px; left: 0;">窗570</div>
+      <div class="window" style="height: 57px; top: 40px; left: -10px;">570</div>
     
     </div>
-    <div class="wall h xs" style="width: 124px; top: -10px; left: 0">1240</div>
-    <div class="wall h xs" style="width: 71px; top: -10px; right: 0">710</div>
+    <div class="wall remove h xs" style="width: 124px; top: -10px; left: 0">1240</div>
+    <div class="wall remove h xs" style="width: 71px; top: -10px; right: 0">710</div>
+    <div class="col" style="width: 50px; height: 35px; left: 0; bottom: 0;"></div>
   </div>
   <!--  饭厅  -->
   <div class="room" style="width: 274px; height: 192px; bottom: 367px; right: 1197px">饭厅
     <div class="wall v" style="height: 192px; bottom: 0px; left: -24px">1920
-      <div class="window" style="height: 123px; top: 53px; left: 0;">窗1230</div>
+      <div class="window" style="height: 123px; top: 53px; left: -10px;">1230</div>
     </div>
     <div class="wall h" style="width: 175px; top: -24px; left: 0">1750</div>
-    <div class="wall h" style="width: 48px; top: -24px; right: -40px">480</div>
+    <div class="wall h" style="width: 48px; top: -24px; right: -37px">480</div>
     <div class="col" style="width: 55px; height: 55px;right: -24px; bottom: -10px;"></div>
   </div>
   <!--  次卧  -->
   <div class="room" style="width: 274px; height: 282px; bottom: 583px; right: 1197px">次卧
     <div class="wall v" style="height: 282px; bottom: 0px; left: -24px">2820
-      <div class="window" style="height: 123px; top: 104px; left: 0;">窗1230</div>
+      <div class="window" style="height: 123px; top: 104px; left: -10px;">1230</div>
     </div>
     <div class="wall h" style="width: 274px; top: -24px; left: 0">2740</div>
     <div class="wall v" style="height: 282px; bottom: 0px; right: -24px">2820</div>
+    <div class="door" style="width: 88px; height: 10px; bottom: -18px; left: 175px;">880</div>
   </div>
   <!--  玄关  -->
   <div class="room" style="width: 127px; height: 200px; right: 1070px; bottom: 357px">玄关
     <div class="wall v" style="height: 200px; bottom: 0px; right: -24px">2000</div>
     <div class="wall h" style="width: 30px; top: -24px; right: -24px"></div>
-    
   </div>
 </div>
 
@@ -88,11 +91,19 @@
   display: flex;
   justify-content: center;
   z-index: 2;
+  box-sizing: border-box;
+}
+
+.wall.remove {
+  background: #fff;
+  border: 1px dashed rgba(0, 0, 0, .6);
+  z-index: 1;
 }
 
 .wall:hover {
   background: rgba(0, 0, 0, 1);
   cursor: pointer;
+  z-index: 2;
 }
 
 .wall.xs {
@@ -132,24 +143,34 @@
 
 .col {
   position: absolute;
-  background: rgba(0, 0, 0, .9);
+  background: rgba(0, 0, 0, .6);
   z-index: 1;
 }
 
 .window {
   position: absolute;
-  width: 24px;
-  background: rgba(255, 255, 255, .5);
-  color: rgba(0, 0, 0, .0);
+  width: 10px;
+  background: #ccc;
+  font-size: 10px;
+  line-height: 10px;
   display: flex;
   justify-content: center;
   writing-mode: tb;
+  color: #000;
 }
 
-.window:hover {
+.door {
   background: #fff;
-  color: rgba(0, 0, 0, 1);
-  cursor: pointer;
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid #000;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  line-height: 10px;
 }
+
+
 
 </style>
