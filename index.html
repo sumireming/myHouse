@@ -1,12 +1,154 @@
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<div id="app">
-  {{ message }}
+<div class="frame">
+<!--  主卧  -->
+  <div class="room" style="width: 437px; height: 333px; right: 24px; bottom: 24px;">
+    主卧
+    <div class="wall h" style="width: 437px; bottom: -24px; right: 0;">4370</div>
+    <div class="wall v" style="height: 333px; bottom: 0; right: -24px;">
+      3330
+      <div class="window" style="height: 173px; bottom: 56px; right: 0;">窗1730</div>
+    </div>
+    <div class="wall h" style="width: 437px; bottom: 333px; right: 0;">4370</div>
+    <div class="wall v xs" style="height: 188px; bottom: 0; left: -10px;">1880</div>
+    <div class="wall v xs" style="height: 57px; top: 0; left: -10px;">570</div>
+    <div class="col" style="width: 35px; height: 20px; top: 0; right: 0;"></div>
+  </div>
+<!--  卫生间  -->
+  <div class="room" style="width: 250px; height: 159px; bottom: 24px; right: 471px">
+    卫生间
+    <div class="wall h" style="width: 250px; bottom: -24px; right: 0;">2500</div>
+    <div class="wall v xs" style="height: 159px; bottom: 0; left: -10px;">1590</div>
+    <div class="wall h xs" style="width: 101px; top: -10px; left: 0;">1010</div>
+    <div class="wall h xs" style="width: 71px; top: -10px; right: 0;">710</div>
+  </div>
+  <!--   过道   -->
+  <div class="room" style="width: 260px; height: 164px; bottom: 193px; right: 471px">过道
+    <div class="wall h" style="width: 260px; top: -24px; left: 0">2600</div>
+    <div class="col" style="width: 63px; height: 20px; top: 0; right: 82px;"></div>
+  </div>  
+  <!--  客厅  -->
+  <div class="room" style="width: 442px; height: 333px; bottom: 24px; right: 731px">客厅
+    <div class="wall h" style="width: 442px; bottom: -24px; left: 0">4420</div>
+    <div class="wall h" style="width: 315px; top: -24px; right: 0">4420</div>
+    <div class="wall v" style="height: 174px; bottom: 0; left: -24px">约1740
+      <div class="window" style="height: 123px; bottom: 0; left: 0;">窗1230</div>
+    </div>
+    
+  </div>
+  <!--  厨房  -->
+  <div class="room" style="width: 274px; height: 159px; bottom: 198px; right: 1197px">厨房
+    <div class="wall h" style="width: 274px; bottom: -24px; right: 0">2740</div>
+    <div class="wall v" style="height: 159px; bottom: 0px; right: -24px">1590</div>
+    <div class="wall v" style="height: 159px; bottom: 0px; left: -24px">1590
+      <div class="window" style="height: 57px; top: 40px; left: 0;">窗570</div>
+    
+    </div>
+    <div class="wall h xs" style="width: 124px; top: -10px; left: 0">1240</div>
+    <div class="wall h xs" style="width: 71px; top: -10px; right: 0">710</div>
+  </div>
+  <!--  饭厅  -->
+  <div class="room" style="width: 274px; height: 192px; bottom: 367px; right: 1197px">饭厅
+    <div class="wall v" style="height: 192px; bottom: 0px; left: -24px">1920
+      <div class="window" style="height: 123px; top: 53px; left: 0;">窗1230</div>
+    </div>
+    <div class="wall h" style="width: 175px; top: -24px; left: 0">1750</div>
+    <div class="wall h" style="width: 48px; top: -24px; right: -40px">480</div>
+    <div class="col" style="width: 55px; height: 55px;right: -24px; bottom: -10px;"></div>
+  </div>
+  <!--  次卧  -->
+  <div class="room" style="width: 274px; height: 282px; bottom: 583px; right: 1197px">次卧
+    <div class="wall v" style="height: 282px; bottom: 0px; left: -24px">2820
+      <div class="window" style="height: 123px; top: 104px; left: 0;">窗1230</div>
+    </div>
+    <div class="wall h" style="width: 274px; top: -24px; left: 0">2740</div>
+    <div class="wall v" style="height: 282px; bottom: 0px; right: -24px">2820</div>
+  </div>
+  <!--  玄关  -->
+  <div class="room" style="width: 127px; height: 200px; right: 1070px; bottom: 357px">玄关
+    <div class="wall v" style="height: 200px; bottom: 0px; right: -24px">2000</div>
+    <div class="wall h" style="width: 30px; top: -24px; right: -24px"></div>
+    
+  </div>
 </div>
-<script>
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-</script>
+
+<style>
+  
+
+.frame {
+  position: relative;
+  width: 1550px;
+  height: 800px;
+}
+
+.wall {
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, .6);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.wall:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+.wall.xs {
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.wall.h {
+  height: 24px;
+}
+
+.wall.h.xs {
+  height: 10px;
+}
+
+.wall.v {
+  width: 24px;
+  writing-mode: tb;
+}
+
+.wall.v.xs {
+  width: 10px;
+}
+
+.room {
+  position: absolute;
+  background: rgba(0, 0, 0, .1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+.room:hover {
+  background: rgba(0, 0, 0, .05);
+}
+
+.col {
+  position: absolute;
+  background: rgba(0, 0, 0, .9);
+  z-index: 1;
+}
+
+.window {
+  position: absolute;
+  width: 24px;
+  background: rgba(255, 255, 255, .5);
+  color: rgba(0, 0, 0, .0);
+  display: flex;
+  justify-content: center;
+  writing-mode: tb;
+}
+
+.window:hover {
+  background: #fff;
+  color: rgba(0, 0, 0, 1);
+}
+
+
+</style>
