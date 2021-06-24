@@ -62,11 +62,16 @@
     <div class="wall remove v" style="height: 159px; bottom: 0px; right: -24px">1590</div>
     <div class="wall v" style="height: 159px; bottom: 0px; left: -24px">1590
       <div class="window" style="height: 57px; top: 40px; left: -10px;">570</div>
-    
     </div>
     <div class="wall remove h xs" style="width: 124px; top: -10px; left: 0">1240</div>
     <div class="wall remove h xs" style="width: 71px; top: -10px; right: 0">710</div>
     <div class="col" style="width: 50px; height: 35px; left: 0; bottom: 0;"></div>
+    <div class="box" style="width: 63.5px; height: 361px; left: 0; bottom: 0; background:lightskyblue;"></div>
+    <div class="box" style="height: 63.5px; width: 234.5px; left: 63.5px; bottom: 0; background: lightskyblue;"></div>
+    <div class="box" style="height: 70px; width: 60px; right: -24px; bottom: 0; background: lightseagreen;font-size: 10px;">吊柜+冰箱</div>
+    <div class="box" style="height: 63.5px; width: 60px; right: 36px; bottom: 0; background: lightgreen; font-size: 10px;">吊柜+烤箱底柜</div>
+
+
   </div>
   <!--  饭厅  -->
   <div class="room" style="width: 274px; height: 192px; bottom: 367px; right: 1197px">饭厅
@@ -121,7 +126,7 @@
 .wall.remove {
   background: #fff;
   border: 1px dashed rgba(0, 0, 0, .6);
-  z-index: 1;
+  z-index: 0;
 }
 
 .wall.add {
@@ -172,7 +177,7 @@
 .col {
   position: absolute;
   background: rgba(0, 0, 0, .6);
-  z-index: 1;
+  z-index: 2;
 }
 
 .window {
@@ -205,6 +210,7 @@
   justify-content: center;
   align-items: center;
   color: #000;
+  z-index: 1;
 }
 
 .bed {
